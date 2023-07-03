@@ -17,46 +17,55 @@ namespace atlas::game {
         }
     private:
         int stones;
+        int move;
 
-
-        void playRound() {
-
+        void playRound() { // Integration
             player_move();
             computer_move();
         }
 
-        void player_move() {
-            int move;
+        void player_move() { // Mischmasch (kaese)
+            if(is_gameover()) return;
 
             while(true) {
                 std::cout << "Es gibt " << stones << " Steine. Bitte nehmen Sie 1,2 oder 3." << std::endl;
                 std::cin >> move;
-                if(move >= 1 && move <= 3) break;
+                if(is_turn_valid()) break;
                 std::cout << "Ungueltiger Zug" << std::endl;
             }
-            stones -= move;
+            terminateMove("Mensch");
         }
 
-        void computer_move() {
+
+
+
+        void computer_move() { // Mischmasch (kaese)
+            if(is_gameover()) return;
+
             const int moves[] = {3,1,1,2};
-            int move;
-            if(stones < 1) {
-                std::cout << "Du Loser" << std::endl;
-
-                return;
-            }
-            if(stones == 1) {
-                std::cout << "Du hast nur Glueck gehabt" << std::endl;
-
-                return;
-            }
             move  = moves[stones % 4];
             std::cout << "Computer nimmt" << move << "Steine." << std::endl;
 
-            stones -= move;
+            terminateMove( "Computer");
         }
 
-        bool is_gameover() {
+        void terminateMove( std::string player) { // Integration
+            updateBoard();
+            printGameOverMessageIfGameIsOver(player);
+        }
+
+        void printGameOverMessageIfGameIsOver(const std::string &player) { // Operation
+            if(is_gameover()) {
+                std::cout << player << " hat verloren" << std::endl;
+            }
+        }
+
+        // Im Implemetierungssumpf --------------------------------------
+
+        bool is_turn_valid() const { return move >= 1 && move <= 3; }
+        void updateBoard() { stones -= move; } // Operation
+
+        bool is_gameover() { // Operation
             return stones < 1;
         }
     };
