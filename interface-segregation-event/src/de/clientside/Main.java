@@ -1,9 +1,8 @@
 package de.clientside;
 
+
 import de.tiere.PigTooFatListener;
 import de.tiere.Schwein;
-
-
 
 public class Main {
 
@@ -18,10 +17,8 @@ public class Main {
 
 	private void run() {
 		Schwein schwein = new Schwein("Miss Piggy");
-
 		schwein.addPigTooFatListener(new SchweineMetzgerAdapter());
 		schwein.addPigTooFatListener(s->spediteur.fahren(s));
-
 		for (int i = 0; i < 11; i++) {
 			schwein.fuettern();
 		}
@@ -39,7 +36,7 @@ public class Main {
 
 }
 
-class Metzger {
+class Metzger  {
 
 
 	public void schlachten(final Object dickesSchwein) {
@@ -47,13 +44,15 @@ class Metzger {
 	}
 }
 
-class Spediteur {
+class Spediteur  {
 
 
-	public void fahren(final Object ware) {
+	public void fahren(final Object dickesSchwein) {
 		System.out.println("Wir fahren auf der Autobahn");
 	}
 }
+
+
 
 
 

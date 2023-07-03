@@ -4,23 +4,16 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-public class Fenster extends Frame  {
+public class Fenster extends Frame {
 
 
     public Fenster()  {
 
         setSize(300, 300);
-
+        addWindowListener(new MyWindowlistener());
         Button button = new Button("Drück mich");
-
-        button.addActionListener(new MyActionListener());
-
-        addWindowListener(new MyWindowListener());
-
+        button.addActionListener(e->ausgabe());
         add(button);
-
-
-
 
     }
 
@@ -29,7 +22,8 @@ public class Fenster extends Frame  {
     }
 
     private void beenden() {
-        // Daten speichern etc.
+
+        // Daten speichern
         dispose();
     }
 
@@ -38,18 +32,17 @@ public class Fenster extends Frame  {
         new Fenster().setVisible(true);
     }
 
-    class MyActionListener implements ActionListener {
-
-        @Override
-        public void actionPerformed(final ActionEvent e) {
-           ausgabe();
-        }
-    }
-
-    class MyWindowListener extends WindowAdapter {
+//    private class MyActionListener implements ActionListener {
+//
+//        @Override
+//        public void actionPerformed(final ActionEvent e) {
+//           ausgabe();
+//        }
+//    }
+    private class MyWindowlistener extends WindowAdapter {
         @Override
         public void windowClosing(final WindowEvent e) {
-            beenden();
+           beenden();
         }
     }
 }

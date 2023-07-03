@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="TakeGameProject" targetName="TakeGameProject" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug-Visual Studio" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Visual Studio" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e8818de1-d82d-45ff-9a1d-e4461350ecd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/GameClient.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/Game.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/TakeGame/TakeGameImpl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-segregation-event/.idea/sonarlint/issuestore/e/2/e256bc943bfb7e67869553fc567c9441d47b206a" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-segregation-event/.idea/sonarlint/issuestore/e/2/e256bc943bfb7e67869553fc567c9441d47b206a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-segregation-event/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-segregation-event/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-segregation-event/src/de/clientside/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-segregation-event/src/de/clientside/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-segregation-gui/.idea/sonarlint/issuestore/4/0/40d3ed2c4d0b574610a1006df664767a4e994cc0" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-segregation-gui/.idea/sonarlint/issuestore/4/0/40d3ed2c4d0b574610a1006df664767a4e994cc0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interface-segregation-gui/src/de/limago/Fenster.java" beforeDir="false" afterPath="$PROJECT_DIR$/../interface-segregation-gui/src/de/limago/Fenster.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Visual Studio" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="1.3" />
+  </component>
+  <component name="ProjectId" id="2S3ozpKhm91siNuKkrHdztoZMwI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "CMakeSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JoachimWagner\git\Atlas\atlas-clean-code-juli-2023-teil1\TakeGameProject\game" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TakeGameProject" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TakeGameProject" TARGET_NAME="TakeGameProject" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="TakeGameProject" RUN_TARGET_NAME="TakeGameProject">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8818de1-d82d-45ff-9a1d-e4461350ecd7" name="Changes" comment="" />
+      <created>1688384890445</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688384890445</updated>
+      <workItem from="1688384892020" duration="2428000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+</project>
