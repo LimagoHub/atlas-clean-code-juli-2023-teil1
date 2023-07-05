@@ -1,0 +1,6 @@
+
+V	cpp:S1235
+"A'ComputerPlayer' has virtual functions but non-virtual destructor(ãÅÃí
+W	cpp:S5945"=Use "std::array" or "std::vector" instead of a C-style array.(“•Üùÿÿÿÿ
+V	cpp:S1235
+"A'ComputerPlayer' has virtual functions but non-virtual destructor(ãÅÃí

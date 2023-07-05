@@ -1,0 +1,5 @@
+
+=	cpp:S5421
+"!Global variables should be const.(‡¹Ìı8å…Şˆ’1
+_	cpp:S1238">Pass expensive to copy object "message" by reference to const.(Şñûüÿÿÿÿ8¢äİˆ’1
+K	cpp:S5020"/Replace "rand" with the facilities in <random>.(Œ«ï¶8¢äİˆ’1

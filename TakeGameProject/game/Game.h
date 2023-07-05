@@ -5,6 +5,8 @@
 #pragma once
 
 namespace atlas::game {
+
+
     class Game {
 
     public:
