@@ -6,17 +6,24 @@
 
 
 #include <memory>
+#include <climits>
+#include <iostream>
 #include "../collections/array_factory.h"
 class ArrayClient {
 
-    std::shared_ptr<atlas::collections::array_factory<int>> factory_;
+    using MyFactory =  std::unique_ptr<atlas::collections::array_factory<int>>;
+
+    MyFactory factory_;
 
 public:
 
-    explicit ArrayClient(const std::shared_ptr<atlas::collections::array_factory<int>> &factory) : factory_(factory) {}
+    explicit ArrayClient(MyFactory factory) : factory_(std::move(factory)) {}
 
     auto go() {
-        auto data = factory_->create_and_fill_array(1000);
-        // Do something with array (Fachlogik)
+        auto data = factory_->create_and_fill_array(INT32_MAX/16);
+        for (int i = 0; i < 10; ++i) {
+            std::cout << data[i] << std::endl;
+        }
+
     }
 };

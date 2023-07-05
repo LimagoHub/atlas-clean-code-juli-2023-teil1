@@ -1,6 +1,8 @@
 #include <iostream>
-
+#include "controllers/impl/BaseControllerImpl.h"
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    atlas::controllers::BaseControllerImpl basecontroller;
+    basecontroller.run();
     return 0;
 }
