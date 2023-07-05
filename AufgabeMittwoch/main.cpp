@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <chrono>
 #include <memory>
+#include <thread>
 
 // 1 bis availableProcessors + 1
 
@@ -18,6 +19,8 @@ public:
     virtual ~Demo() = default;
 
     auto run()->void {
+
+        auto availableProcessors = std::thread::hardware_concurrency();
         auto start = high_resolution_clock::now();
         for (int i = 0; i < MAX_ARRAY_SIZE; ++i) {
             data[i] = rand();
