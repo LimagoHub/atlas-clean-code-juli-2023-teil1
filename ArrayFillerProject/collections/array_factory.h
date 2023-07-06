@@ -4,13 +4,16 @@
 
 #pragma once
 #include <memory>
+#include <vector>
+
 namespace atlas::collections {
     template<class T>
     class array_factory {
 
 
     public:
-        virtual auto create_and_fill_array(size_t size) -> std::shared_ptr<T[]> = 0;
+        virtual ~array_factory() = default;
+        virtual auto create_and_fill_array(size_t size) -> std::shared_ptr<std::vector<T> > = 0;
     };
 
 }

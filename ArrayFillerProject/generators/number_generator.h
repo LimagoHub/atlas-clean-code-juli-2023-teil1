@@ -12,6 +12,7 @@ namespace atlas::generators {
 
     class number_generator: public generator<int> {
     public:
-        [[nodiscard ]] virtual auto next() -> int = 0;
+        ~number_generator() override = default;
+        [[nodiscard ]] auto next() -> int  override  = 0;
     };
 }

@@ -4,16 +4,15 @@
 
 #pragma once
 #include <memory>
-#include "number_generator.h"
+#include "generator_factory.h"
 
 
 namespace atlas::generators {
-    class number_generator_factory {
+    class number_generator_factory: public generator_factory<int> {
 
     public:
 
-        virtual ~number_generator_factory() = default;
-
-        [[nodiscard]] virtual auto create() const->std::unique_ptr<number_generator> = 0;
+        ~number_generator_factory()  override = default;
+        [[nodiscard]] auto create() const -> std::unique_ptr<generator<int>> override = 0;
     };
 }

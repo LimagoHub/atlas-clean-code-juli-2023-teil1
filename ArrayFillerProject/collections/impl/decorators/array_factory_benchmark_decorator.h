@@ -17,8 +17,8 @@ namespace atlas::collections {
 
     public:
         explicit array_factory_benchmark_decorator(array_factory_pointer _arrayFactory) : arrayFactory_(std::move(_arrayFactory)) {}
-
-        auto create_and_fill_array(size_t size) -> std::shared_ptr<T[]> override {
+        ~array_factory_benchmark_decorator() override = default;
+        auto create_and_fill_array(size_t size) -> std::shared_ptr<std::vector<T>> override {
             auto start = std::chrono::high_resolution_clock::now();
             auto result = arrayFactory_->create_and_fill_array(size);
             auto ende = std::chrono::high_resolution_clock::now();

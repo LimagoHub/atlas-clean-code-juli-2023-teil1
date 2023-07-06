@@ -18,12 +18,12 @@ class ArrayClient {
 public:
 
     explicit ArrayClient(MyFactory factory) : factory_(std::move(factory)) {}
-
+    virtual ~ArrayClient() = default;
     auto go() {
         auto data = factory_->create_and_fill_array(INT32_MAX/16);
-        for (int i = 0; i < 10; ++i) {
-            std::cout << data[i] << std::endl;
-        }
+
+        std::cout << "Erster Wert = " << (*data)[0] << std::endl;
+
 
     }
 };

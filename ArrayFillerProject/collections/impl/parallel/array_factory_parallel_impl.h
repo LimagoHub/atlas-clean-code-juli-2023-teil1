@@ -16,21 +16,21 @@ namespace atlas::collections {
     template<class T>
     class array_factory_parallel_impl : public abstract_array_factory<T> {
 
-        number_generator_factory &generatorFactory_;
+        using MyGeneratorFactory = std::unique_ptr<generator_factory<T>>;
+        MyGeneratorFactory generatorFactory_;
         size_t thread_count_;
         std::vector<std::thread> threadHolder_;
         std::size_t partitionSize_;
 
 
     public:
-        array_factory_parallel_impl(number_generator_factory  &generatorFactory, size_t threadCount) : generatorFactory_(
-                generatorFactory),
+        array_factory_parallel_impl(MyGeneratorFactory  generatorFactory, size_t threadCount) : generatorFactory_(
+                std::move(generatorFactory)),
                 thread_count_(threadCount) {}
 
-
-
+        ~array_factory_parallel_impl()  override = default;
     protected:
-        auto fill_array() -> void override {
+        auto fill_array() -> void override {// Integration
             calculatePartitionSize();
             initializeThreadHolder();
             addWorkersToThreads();
@@ -62,20 +62,23 @@ namespace atlas::collections {
             }
         }
 
-        auto  start_single_worker_for_segment(const unsigned int segment) -> void
+        auto  start_single_worker_for_segment( const unsigned int segment) -> void
         {
             const size_t start = segment * partitionSize_;
             const size_t end = start + partitionSize_;
-            threadHolder_.emplace_back(&this->fill_segment_worker, this, start, end);
+            threadHolder_.emplace_back(
+                    &array_factory_parallel_impl::fill_segment_worker,
+                    this,
+                    start,
+                    end);
         }
 
-        auto fill_segment_worker( std::size_t startIndex, std::size_t endIndex) -> void
+        auto fill_segment_worker( const std::size_t startIndex, const std::size_t endIndex) -> void
         {
-            auto const numberGenerator = generatorFactory_.create();
-
+            auto const generator = generatorFactory_->create();
+            auto field = this->getData();
             for (auto i = startIndex; i < endIndex; ++i) {
-                this->getData()[i] = numberGenerator->next();
-
+                field->at(i) = generator->next();
             }
         }
 

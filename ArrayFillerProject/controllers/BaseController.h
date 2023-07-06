@@ -8,10 +8,9 @@ namespace atlas::controllers {
 
     class BaseController {
 
-        auto create() -> void {
 
-        }
     public:
+        virtual ~BaseController() = default;
         virtual auto run() -> void = 0;
     };
 }

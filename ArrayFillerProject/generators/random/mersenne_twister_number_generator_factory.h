@@ -10,7 +10,10 @@
 namespace atlas::generators {
     class mersenne_twister_number_generator_factory : public number_generator_factory {
     public:
-        [[nodiscard]] auto create() const -> std::unique_ptr<number_generator> override
+
+
+        ~mersenne_twister_number_generator_factory() override = default;
+        [[nodiscard]] auto create() const -> std::unique_ptr<generator<int>> override
         {
             return std::make_unique<mersenne_twister_number_generator>();
         }

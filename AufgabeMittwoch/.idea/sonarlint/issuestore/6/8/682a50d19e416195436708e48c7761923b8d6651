@@ -1,7 +1,0 @@
-
-F	cpp:S1481"%unused variable 'availableProcessors'(ûƒåÚşÿÿÿÿ8¾´±§’1
-Y	cpp:S5945"=Use "std::array" or "std::vector" instead of a C-style array.(·šğ’8÷Êø¦’1
-^	cpp:S5945"=Use "std::array" or "std::vector" instead of a C-style array.(‹ßèèúÿÿÿÿ8÷Ã‚§’1
-P	cpp:S5020"/Replace "rand" with the facilities in <random>.(¼„ñ¯şÿÿÿÿ8øÊø¦’1
-Œ	cpp:S3230"kDo not use the constructor's initializer list for data member "data". Use the in-class initializer instead.(‹ßèèúÿÿÿÿ8ûÃ‚§’1
-n	cpp:S1854"MValue stored to 'availableProcessors' during its initialization is never read(ûƒåÚşÿÿÿÿ8ô´±§’1
